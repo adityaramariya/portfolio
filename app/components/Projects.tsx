@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Pills from "./ui/Pills";
+import SectionHeader from "./SectionHeader";
 
 const projects = [
   {
@@ -52,38 +54,24 @@ const Projects = () => {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
-          <div className="max-w-3xl">
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-10 bg-indigo-600" />
 
-              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
-                Selected Work
-              </span>
-            </div>
-
-            <h2 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+        <SectionHeader
+          title="Selected Work"
+          description={
+            <>
               Projects I'm{" "}
               <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
                 Proud of.
               </span>
-            </h2>
+            </>
+          }
+        />
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-500">
-              A selection of projects where I turned ideas, designs and complex
-              requirements into scalable frontend experiences.
-            </p>
-          </div>
-
-          {/* <a
-            href="#contact"
-            className="group inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-gray-950 transition-colors hover:text-indigo-600"
-          >
-            Have a project in mind?
-            <span className="transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </a> */}
+        <div className="mb-16 mt-5 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+          <p className="max-w-2xl text-lg leading-8 text-gray-500">
+            A selection of projects where I turned ideas, designs and complex
+            requirements into scalable frontend experiences.
+          </p>
         </div>
 
         {/* Projects */}
@@ -146,28 +134,10 @@ const Projects = () => {
                     {project.description}
                   </p>
 
-                  {/* Technologies */}
-                  <div className="mt-7 flex flex-wrap gap-2">
-                    {project.technologies.map((technology) => (
-                      <span
-                        key={technology}
-                        className="rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-xs font-medium text-gray-600 transition-colors hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600"
-                      >
-                        {technology}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Link */}
-                  {/* <a
-                    href={project.href}
-                    className="group/link mt-8 inline-flex items-center gap-3 rounded-full bg-gray-950 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-600"
-                  >
-                    View Case Study
-                    <span className="transition-transform duration-300 group-hover/link:translate-x-1">
-                      →
-                    </span>
-                  </a> */}
+                  <Pills
+                    data={project.technologies}
+                    className="mt-7 flex flex-wrap gap-2"
+                  />
                 </div>
               </div>
             </article>

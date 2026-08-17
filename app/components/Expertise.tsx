@@ -1,3 +1,6 @@
+import Card from "./ui/card/Card";
+import Pills from "./ui/Pills";
+
 const Expertise = () => {
   const expertise = [
     {
@@ -65,18 +68,14 @@ const Expertise = () => {
 
         {/* Expertise Grid */}
         <div className="grid gap-5 md:grid-cols-2">
-          {expertise.map((item) => (
-            <div
-              key={item.number}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-indigo-400/30 hover:bg-white/[0.06] sm:p-9"
-            >
-              {/* Hover Gradient */}
+          {expertise.map(({ number, title, description, technologies }) => (
+            <Card key={number} variant="dark">
               <div className="absolute -right-20 -top-20 h-40 w-40 rounded-full bg-indigo-500/10 blur-3xl transition-all duration-500 group-hover:bg-indigo-500/20" />
 
               {/* Number */}
               <div className="relative flex items-start justify-between">
                 <span className="text-sm font-medium tracking-widest text-indigo-400">
-                  {item.number}
+                  {number}
                 </span>
 
                 <span className="text-2xl text-gray-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-indigo-400">
@@ -87,26 +86,22 @@ const Expertise = () => {
               {/* Content */}
               <div className="relative mt-12">
                 <h3 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                  {item.title}
+                  {title}
                 </h3>
 
                 <p className="mt-4 max-w-xl text-base leading-7 text-gray-400">
-                  {item.description}
+                  {description}
                 </p>
               </div>
 
               {/* Technologies */}
-              <div className="relative mt-8 flex flex-wrap gap-2">
-                {item.technologies.map((technology) => (
-                  <span
-                    key={technology}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-gray-400 transition-colors group-hover:border-white/15 group-hover:text-gray-300"
-                  >
-                    {technology}
-                  </span>
-                ))}
-              </div>
-            </div>
+
+              <Pills
+                data={technologies}
+                variant="dark"
+                className="gap-2 mt-5"
+              />
+            </Card>
           ))}
         </div>
 

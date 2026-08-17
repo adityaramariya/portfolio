@@ -1,3 +1,7 @@
+import SectionHeader from "./SectionHeader";
+import Highlight from "./ui/Highlight";
+import Pills from "./ui/Pills";
+
 const Experience = () => {
   const experiences = [
     {
@@ -85,21 +89,18 @@ const Experience = () => {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
+
         <div className="mb-16 max-w-3xl">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-10 bg-indigo-500" />
-
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-400">
-              Experience
-            </span>
-          </div>
-
-          <h2 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-            8+ years of{" "}
-            <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              building for the web.
-            </span>
-          </h2>
+          <SectionHeader
+            variant="dark"
+            title="Experience"
+            description={
+              <>
+                8+ years of{" "}
+                <Highlight variant="dark">building for the web.</Highlight>
+              </>
+            }
+          />
 
           <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
             A journey focused on building thoughtful interfaces, solving complex
@@ -167,14 +168,11 @@ const Experience = () => {
 
                   {/* Technologies */}
                   <div className="mt-8 flex flex-wrap gap-2 border-t border-white/10 pt-6">
-                    {experience.technologies.map((technology) => (
-                      <span
-                        key={technology}
-                        className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-gray-400"
-                      >
-                        {technology}
-                      </span>
-                    ))}
+                    <Pills
+                      data={experience.technologies}
+                      variant="dark"
+                      className="gap-2"
+                    />
                   </div>
                 </div>
               </article>

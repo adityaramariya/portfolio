@@ -1,5 +1,8 @@
 "use client";
 
+import SectionHeader from "./SectionHeader";
+import Highlight from "./ui/Highlight";
+
 const techStack = {
   Core: [
     {
@@ -122,21 +125,14 @@ const TechStack = () => {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16 max-w-3xl">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-10 bg-indigo-600" />
-
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
-              Tech Stack
-            </span>
-          </div>
-
-          <h2 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-            Tools I use to{" "}
-            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-              bring ideas to life.
-            </span>
-          </h2>
-
+          <SectionHeader
+            title="Tech Stack"
+            description={
+              <>
+                Tools I use to <Highlight>bring ideas to life.</Highlight>
+              </>
+            }
+          />
           <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-500">
             A modern frontend toolkit focused on building scalable, maintainable
             and high-performing digital experiences.
@@ -203,11 +199,6 @@ const TechStack = () => {
                           />
                         ))}
                       </div>
-
-                      {/* Description */}
-                      {/* <p className="mt-4 text-sm leading-6 text-gray-500">
-                        {technology.description}
-                      </p> */}
                     </div>
                   </div>
                 ))}

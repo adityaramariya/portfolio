@@ -1,5 +1,9 @@
 "use client";
 
+import SectionHeader from "./SectionHeader";
+import Card from "./ui/card/Card";
+import Highlight from "./ui/Highlight";
+
 const WhyWorkWithMe = () => {
   const reasons = [
     {
@@ -39,60 +43,55 @@ const WhyWorkWithMe = () => {
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-16 max-w-3xl">
-          <div className="mb-5 flex items-center gap-3">
-            <span className="h-px w-10 bg-indigo-600" />
 
-            <span className="text-sm font-semibold uppercase tracking-[0.2em] text-indigo-600">
-              Why Work With Me
-            </span>
-          </div>
+        <SectionHeader
+          title="Why Work With Me"
+          description={
+            <>
+              More than just {""}
+              <Highlight>writing code.</Highlight> <br />
+            </>
+          }
+        />
 
-          <h2 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-            More than just{" "}
-            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-              writing code.
-            </span>
-          </h2>
-
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-500">
-            I bring engineering experience, product thinking and attention to
-            detail to every project I work on.
-          </p>
-        </div>
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-500">
+          I bring engineering experience, product thinking and attention to
+          detail to every project I work on.
+        </p>
 
         {/* Reasons */}
-        <div className="grid gap-5 md:grid-cols-2">
-          {reasons.map((reason) => (
-            <article
-              key={reason.number}
-              className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl sm:p-9"
-            >
+        <div className="grid gap-5 md:grid-cols-2 mt-16">
+          {reasons.map(({ number, title, description }) => (
+            // <article
+            //   key={reason.number}
+            //   className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-7 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl sm:p-9"
+            // >
+            <Card key={number}>
               {/* Background Number */}
               <span className="pointer-events-none absolute -right-4 -top-8 text-[120px] font-black leading-none text-gray-50 transition-colors duration-500 group-hover:text-indigo-50">
-                {reason.number}
+                {number}
               </span>
 
               <div className="relative">
                 {/* Number */}
                 <span className="text-sm font-bold tracking-widest text-indigo-600">
-                  {reason.number}
+                  {number}
                 </span>
 
                 {/* Title */}
                 <h3 className="mt-10 text-2xl font-bold tracking-tight text-gray-950 sm:text-3xl">
-                  {reason.title}
+                  {title}
                 </h3>
 
                 {/* Description */}
                 <p className="mt-4 max-w-xl text-base leading-7 text-gray-500">
-                  {reason.description}
+                  {description}
                 </p>
 
                 {/* Bottom Line */}
                 <div className="mt-8 h-px w-12 bg-gray-200 transition-all duration-500 group-hover:w-24 group-hover:bg-indigo-500" />
               </div>
-            </article>
+            </Card>
           ))}
         </div>
 
