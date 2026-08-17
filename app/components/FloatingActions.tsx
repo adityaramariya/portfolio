@@ -1,13 +1,15 @@
 "use client";
 
-console.log(`path , ${process.env.NEXT_PUBLIC_BASE_PATH}`);
+console.log(`path , ${basePath}`);
+
+import { basePath } from "@/constant";
 
 const FloatingActions = () => {
   return (
     <div className="fixed bottom-2 right-5 z-40 hidden items-center gap-1.5 rounded-2xl border border-white/10 bg-gray-950/85 p-1.5 shadow-2xl shadow-black/20 backdrop-blur-xl sm:flex">
       {/* Resume */}
       <a
-        href={`${process.env.NEXT_PUBLIC_BASE_PATH}/aditya_ramariya_front_end_developer.pdf`}
+        href={`${basePath}/aditya_ramariya_front_end_developer.pdf`}
         target="_blank"
         rel="noopener noreferrer"
         className="rounded-xl px-4 py-2.5 text-sm font-medium text-gray-300 transition-all duration-300 hover:bg-white/10 hover:text-white"

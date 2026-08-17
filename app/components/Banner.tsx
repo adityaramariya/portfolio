@@ -1,5 +1,7 @@
 "use client";
 
+import { basePath } from "@/constant";
+
 const Banner = () => {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-gray-950">
@@ -17,7 +19,7 @@ const Banner = () => {
         >
           {/* <source src="/videos/banner-video.mp4" type="video/mp4" /> */}
           <source
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/videos/banner-video.mp4`}
+            src={`${basePath}/videos/banner-video.mp4`}
             type="video/mp4"
           />
         </video>
