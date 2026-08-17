@@ -16,7 +16,10 @@ const Banner = () => {
           className="absolute inset-0 h-full w-full object-cover"
         >
           {/* <source src="/videos/banner-video.mp4" type="video/mp4" /> */}
-          <source src={`/videos/banner-video.mp4`} type="video/mp4" />
+          <source
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH}/videos/banner-video.mp4`}
+            type="video/mp4"
+          />
         </video>
       </div>
       {/* =========================
