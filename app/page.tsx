@@ -7,7 +7,7 @@ import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 import WhyWorkWithMe from "./components/WhyWorkWithMe";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <main className="">

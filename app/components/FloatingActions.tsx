@@ -3,6 +3,7 @@
 console.log(`path , ${basePath}`);
 
 import { basePath } from "@/constant";
+import RecruiterChat from "./RecruiterChat";
 
 const FloatingActions = () => {
   return (
@@ -24,6 +25,7 @@ const FloatingActions = () => {
       >
         Contact
       </a>
+      <RecruiterChat />
     </div>
   );
 };
