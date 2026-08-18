@@ -1,9 +1,7 @@
 "use client";
 
-console.log(`path , ${basePath}`);
-
 import { basePath } from "@/constant";
-import RecruiterChat from "./RecruiterChat";
+// import RecruiterChat from "./RecruiterChat";
 
 const FloatingActions = () => {
   return (
@@ -25,7 +23,7 @@ const FloatingActions = () => {
       >
         Contact
       </a>
-      <RecruiterChat />
+      {/* <RecruiterChat /> */}
     </div>
   );
 };

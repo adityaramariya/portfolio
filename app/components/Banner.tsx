@@ -14,10 +14,14 @@ const Banner = () => {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           className="absolute inset-0 h-full w-full object-cover"
+          poster={`${basePath}/images/banner-poster.webp`}
         >
-          {/* <source src="/videos/banner-video.mp4" type="video/mp4" /> */}
+          <source
+            src={`${basePath}/videos/banner-video.webm`}
+            type="video/webm"
+          />
           <source
             src={`${basePath}/videos/banner-video.mp4`}
             type="video/mp4"
