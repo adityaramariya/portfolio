@@ -1,5 +1,7 @@
 "use client";
 
+import { basePath } from "@/constant";
+
 const Contact = () => {
   return (
     <section
@@ -46,7 +48,7 @@ const Contact = () => {
           {/* Email */}
 
           <a
-            href="/aditya_ramariya_front_end_developer.pdf"
+            href={`${basePath}/aditya_ramariya_front_end_developer.pdf`}
             target="_blank"
             className="group border border-indigo-600/10 bg-white/[0.03] p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-indigo-400/30 hover:bg-white/[0.06]"
           >
