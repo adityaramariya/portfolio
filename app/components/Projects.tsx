@@ -1,48 +1,35 @@
 "use client";
 
-import Image from "next/image";
 import Pills from "./ui/Pills";
 import SectionHeader from "./SectionHeader";
+import { BaseURL } from "@/constant";
+import useFetchData from "../hooks/useFetchData";
 
-const projects = [
-  {
-    number: "01",
-    title: "Compatibility Checker",
-    category: "Web Application",
-    description:
-      "Responsive application that determines whether a device is compatible with selected applications, with manual search and QR-based device identification",
-    technologies: [
-      "Next.JS",
-      "React.JS",
-      "TypeScript",
-      "Hooks",
-      "Tailwind CSS",
-    ],
-    image: "/images/scottdunn.png",
-  },
-  {
-    number: "02",
-    title: "OneID Portal",
-    category: "SaaS / Dashboard",
-    description:
-      "Administrative web portal for managing a mobile application and its operational workflows",
-    technologies: ["React.JS", "React-Admin", "Hooks", "Material UI"],
-    image: "/images/scottdunn.png",
-    href: "#",
-  },
-  {
-    number: "03",
-    title: "ScottDunn",
-    category: "Marketing Website",
-    description:
-      "Luxury travel website presenting premium holiday experiences across ski destinations, safari lodges and expedition cruises.",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
-    image: "/images/scottdunn.png",
-    href: "#",
-  },
-];
+type ProjectsProps = {
+  id: number;
+  title: string;
+  category: string;
+  description: string;
+  technologies: [];
+  image: string;
+  href?: string;
+};
 
 const Projects = () => {
+  const {
+    data: projects,
+    loading,
+    error,
+  } = useFetchData(`${BaseURL}/api/projects`);
+
+  if (loading) {
+    return <p>loading...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
   return (
     <section
       id="projects"
@@ -76,72 +63,74 @@ const Projects = () => {
 
         {/* Projects */}
         <div className="space-y-24">
-          {projects.map((project, index) => (
-            <article key={project.number} className="group">
-              <div
-                className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
-                  index % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""
-                }`}
-              >
-                {/* Project Image */}
-                <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-100 shadow-sm">
-                  {/* Browser Bar */}
-                  <div className="absolute left-0 right-0 top-0 z-10 flex h-10 items-center gap-1.5 border-b border-white/10 bg-gray-950/90 px-4 backdrop-blur-md">
-                    <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
-                    <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
+          {projects?.map(
+            ({
+              id,
+              category,
+              title,
+              description,
+              technologies,
+              image,
+              href,
+            }: ProjectsProps) => (
+              <article key={id} className="group">
+                <div
+                  className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
+                    id % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""
+                  }`}
+                >
+                  {/* Project Image */}
+                  <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-gray-100 shadow-sm">
+                    {/* Browser Bar */}
+                    <div className="absolute left-0 right-0 top-0 z-10 flex h-10 items-center gap-1.5 border-b border-white/10 bg-gray-950/90 px-4 backdrop-blur-md">
+                      <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
+                      <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
+                    </div>
+
+                    <div className="relative aspect-[16/11] overflow-hidden">
+                      <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+                        <span className="text-sm font-medium text-gray-400">
+                          Image coming soon
+                        </span>
+                      </div>
+
+                      {/* Image Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    </div>
                   </div>
 
-                  <div className="relative aspect-[16/11] overflow-hidden">
-                    {/* <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover object-top transition duration-700 ease-out group-hover:scale-105"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    /> */}
+                  {/* Project Content */}
+                  <div className="max-w-xl">
+                    <div className="flex items-center gap-4">
+                      <span className="text-sm font-semibold text-indigo-600">
+                        {id}
+                      </span>
 
-                    <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+                      <span className="h-px w-8 bg-gray-300" />
+
                       <span className="text-sm font-medium text-gray-400">
-                        Image coming soon
+                        {category}
                       </span>
                     </div>
 
-                    {/* Image Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <h3 className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl">
+                      {title}
+                    </h3>
+
+                    <p className="mt-5 text-base leading-8 text-gray-500">
+                      {description}
+                    </p>
+
+                    <Pills
+                      data={technologies}
+                      className="mt-7 flex flex-wrap gap-2"
+                    />
                   </div>
                 </div>
-
-                {/* Project Content */}
-                <div className="max-w-xl">
-                  <div className="flex items-center gap-4">
-                    <span className="text-sm font-semibold text-indigo-600">
-                      {project.number}
-                    </span>
-
-                    <span className="h-px w-8 bg-gray-300" />
-
-                    <span className="text-sm font-medium text-gray-400">
-                      {project.category}
-                    </span>
-                  </div>
-
-                  <h3 className="mt-5 text-3xl font-bold tracking-tight sm:text-4xl">
-                    {project.title}
-                  </h3>
-
-                  <p className="mt-5 text-base leading-8 text-gray-500">
-                    {project.description}
-                  </p>
-
-                  <Pills
-                    data={project.technologies}
-                    className="mt-7 flex flex-wrap gap-2"
-                  />
-                </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            ),
+          )}
         </div>
 
         {/* Bottom CTA */}
