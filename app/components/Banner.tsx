@@ -1,6 +1,7 @@
 "use client";
 
 import { basePath } from "@/constant";
+import Button from "./ui/button/button";
 
 const Banner = () => {
   return (
@@ -83,7 +84,7 @@ const Banner = () => {
 
           {/* Buttons */}
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a
+            {/* <a
               href="#projects"
               className="group inline-flex min-w-[160px] items-center justify-center gap-2 rounded-xl bg-white px-6 py-3.5 text-sm font-semibold text-gray-950 shadow-lg shadow-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-gray-100 hover:shadow-xl"
             >
@@ -91,14 +92,22 @@ const Banner = () => {
               <span className="transition-transform duration-300 group-hover:translate-x-1">
                 →
               </span>
-            </a>
+            </a> */}
 
-            <a
+            <Button label="View my work" isIcon>
+              <span className="transition-transform duration-300 group-hover:translate-x-1">
+                →
+              </span>
+            </Button>
+
+            <Button label="Let's talk" variant="dark" />
+
+            {/* <a
               href="#contact"
               className="inline-flex min-w-[160px] items-center justify-center rounded-xl border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-white/40 hover:bg-white/20"
             >
               Let's Talk
-            </a>
+            </a> */}
           </div>
 
           {/* Scroll Indicator */}
