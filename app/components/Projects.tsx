@@ -4,6 +4,7 @@ import Pills from "./ui/Pills";
 import SectionHeader from "./SectionHeader";
 import { BaseURL } from "@/constant";
 import useFetchData from "../hooks/useFetchData";
+import Loader from "./ui/Loader";
 
 type ProjectsProps = {
   id: number;
@@ -23,7 +24,7 @@ const Projects = () => {
   } = useFetchData(`${BaseURL}/api/projects`);
 
   if (loading) {
-    return <p>loading...</p>;
+    return <Loader text="Loading Projects"></Loader>;
   }
 
   if (error) {
