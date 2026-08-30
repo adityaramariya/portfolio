@@ -4,7 +4,7 @@ type ButtonProps = {
   label?: string;
   isIcon?: boolean;
   children?: React.ReactNode;
-  onClick?: {};
+  onClick?: () => void;
 };
 
 const variants = {
@@ -23,6 +23,7 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <button
+      onClick={onClick}
       type={type}
       className={`group border inline-flex min-w-[160px]  items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold shadow-lg shadow-white/10 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl backdrop-blur-md ${variants[variant]}`}
       {...rest}

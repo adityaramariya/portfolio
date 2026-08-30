@@ -5,6 +5,7 @@ import SectionHeader from "./SectionHeader";
 import { BaseURL } from "@/constant";
 import useFetchData from "../hooks/useFetchData";
 import Loader from "./ui/Loader";
+import ErrorMessage from "./ErrorMessage";
 
 type ProjectsProps = {
   id: number;
@@ -21,6 +22,7 @@ const Projects = () => {
     data: projects,
     loading,
     error,
+    retry,
   } = useFetchData(`${BaseURL}/api/projects`);
 
   if (loading) {
@@ -28,7 +30,8 @@ const Projects = () => {
   }
 
   if (error) {
-    return <p>{error}</p>;
+    // return <p>{error}</p>;
+    return <ErrorMessage onRetry={retry} />;
   }
 
   return (
