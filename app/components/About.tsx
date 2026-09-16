@@ -146,6 +146,7 @@ const About = () => {
               that scale
             </>
           }
+          classes="text-primary"
         />
 
         <div className="grid gap-12 lg:grid-cols-[1.3fr_0.7fr] lg:gap-20 mt-6">
