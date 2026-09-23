@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "../model/themeContext";
-import Button from "@/src/shared/ui/button/button";
+import Button from "@/shared/ui/button/button";
 
 const ThemeButton = () => {
   const { theme, setTheme } = useTheme();
