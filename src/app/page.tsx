@@ -1,30 +1,25 @@
-// import Home from "../pages/home/ui/HomePage";
-
-// export default function Page() {
-//   return <Home />;
-// }
-
-import About from "@/src/widgets/about/ui/About";
-import Banner from "@/src/widgets/hero/ui/Banner";
-import Contact from "@/src/widgets/contact/ui/Contact";
-import Experience from "@/src/widgets/experience/ui/Experience";
-import Expertise from "@/src/widgets/expertise/ui/Expertise";
-import Projects from "@/src/widgets/projects/ui/Projects";
-import TechStack from "@/src/widgets/tech-stack/ui/TechStack";
-import WhyWorkWithMe from "@/src/widgets/why-work-with-us/ui/WhyWorkWithMe";
+// import About from "@/src/widgets/about/ui/About";
+import { AboutSection } from "@/widgets/about";
+import { HeroSection } from "@/widgets/hero/";
+import { ContactSection } from "@/widgets/contact";
+import { ExperienceSection } from "@/widgets/experience";
+import { ExpertiseSection } from "@/widgets/expertise";
+import { ProjectsSection } from "@/widgets/projects";
+import { TechStackSection } from "@/widgets/tech-stack";
+import { WhyWorkWithMeSection } from "@/widgets/why-work-with-us";
 
 export default async function Home() {
   return (
     <>
       <main className="">
-        <Banner />
-        <About />
-        <Expertise />
-        <Projects />
-        <Experience />
-        <TechStack />
-        <Contact />
-        <WhyWorkWithMe />
+        <HeroSection />
+        <AboutSection />
+        <ExpertiseSection />
+        <ProjectsSection />
+        <ExperienceSection />
+        <TechStackSection />
+        <ContactSection />
+        <WhyWorkWithMeSection />
       </main>
     </>
   );

@@ -1,7 +1,7 @@
 "use client";
 
-import SectionHeader from "@/src/shared/ui/SectionHeader";
-import Highlight from "@/src/shared/ui/Highlight";
+import SectionHeader from "@/shared/ui/SectionHeader";
+import Highlight from "@/shared/ui/Highlight";
 
 const techStack = {
   Core: [

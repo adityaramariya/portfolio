@@ -1,4 +1,5 @@
-import Button from "../../../shared/ui/button/button";
+// import Button from "../../../shared/ui/button/button";
+import Button from "@/shared/ui/button/button";
 
 type ErrorMessageProps = {
   message?: string;

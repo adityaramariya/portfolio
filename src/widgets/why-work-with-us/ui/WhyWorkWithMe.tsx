@@ -1,8 +1,8 @@
 "use client";
 
-import SectionHeader from "@/src/shared/ui/SectionHeader";
-import Card from "@/src/shared/ui/card/card";
-import Highlight from "@/src/shared/ui/Highlight";
+import SectionHeader from "@/shared/ui/SectionHeader";
+import Card from "@/shared/ui/card/card";
+import Highlight from "@/shared/ui/Highlight";
 
 const WhyWorkWithMe = () => {
   const reasons = [

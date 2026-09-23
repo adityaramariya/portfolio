@@ -5,7 +5,7 @@ import "./globals.css";
 import FloatingActions from "../features/floating-actions/ui/FloatingActions";
 import Navbar from "../widgets/header/ui/Navbar";
 
-import Footer from "../widgets/footer/ui/Footer";
+import { Footer } from "../widgets/footer";
 import { ThemeProvider } from "../features/theme-switch/model/themeContext";
 
 const geistSans = Geist({

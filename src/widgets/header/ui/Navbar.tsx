@@ -11,9 +11,6 @@ const navItems = [
   { label: "Contact", href: "#contact" },
 ];
 
-// const PHONE_NUMBER = "+91 90399 74554";
-// const PHONE_LINK = "+919039974554";
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);

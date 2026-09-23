@@ -1,11 +1,11 @@
 "use client";
 
-import Pills from "@/src/shared/ui/Pills";
-import SectionHeader from "@/src/shared/ui/SectionHeader";
-import { BaseURL } from "@/src/shared/config/app-config";
-import useFetchData from "@/src/shared/hooks/useFetchData";
-import Loader from "@/src/shared/ui/Loader";
-import ErrorMessage from "@/src/features/error-message/ui/ErrorMessage";
+import Pills from "@/shared/ui/Pills";
+import SectionHeader from "@/shared/ui/SectionHeader";
+import { BaseURL } from "@/shared/config/app-config";
+import useFetchData from "@/shared/hooks/useFetchData";
+import Loader from "@/shared/ui/Loader";
+import ErrorMessage from "@/features/error-message/ui/ErrorMessage";
 
 type ProjectsProps = {
   id: number;

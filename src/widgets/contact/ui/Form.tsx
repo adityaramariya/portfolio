@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { BaseURL } from "@/src/shared/config/app-config";
+import { BaseURL } from "@/shared/config/app-config";
 
-export default function ContactForm() {
+export default function Form() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
