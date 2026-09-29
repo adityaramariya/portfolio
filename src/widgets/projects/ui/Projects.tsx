@@ -6,6 +6,7 @@ import { BaseURL } from "@/shared/config/app-config";
 import useFetchData from "@/shared/hooks/useFetchData";
 import Loader from "@/shared/ui/Loader";
 import ErrorMessage from "@/features/error-message/ui/ErrorMessage";
+import Image from "next/image";
 
 type ProjectsProps = {
   id: number;
@@ -98,7 +99,12 @@ const Projects = () => {
                     <div className="relative aspect-[16/11] overflow-hidden">
                       <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                         {image !== "" ? (
-                          <img src={image} alt={image} />
+                          <Image
+                            src={image}
+                            alt={image}
+                            fill
+                            className="object-contain"
+                          />
                         ) : (
                           <span className="text-sm font-medium text-gray-400">
                             Image coming soon
