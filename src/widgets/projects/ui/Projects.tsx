@@ -2,7 +2,7 @@
 
 import Pills from "@/shared/ui/Pills";
 import SectionHeader from "@/shared/ui/SectionHeader";
-import { BaseURL } from "@/shared/config/app-config";
+import { basePath, BaseURL } from "@/shared/config/app-config";
 import useFetchData from "@/shared/hooks/useFetchData";
 import Loader from "@/shared/ui/Loader";
 import ErrorMessage from "@/features/error-message/ui/ErrorMessage";
@@ -100,7 +100,7 @@ const Projects = () => {
                       <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
                         {image !== "" ? (
                           <Image
-                            src={image}
+                            src={`${basePath}/${image}`}
                             alt={image}
                             fill
                             className="object-contain"
