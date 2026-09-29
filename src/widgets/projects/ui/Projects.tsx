@@ -39,7 +39,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="relative overflow-hidden bg-white py-24 text-gray-950 sm:py-32"
+      className="relative overflow-hidden bg-white py-12 text-gray-950 sm:py-32"
     >
       {/* Background decoration */}
       <div className="absolute -left-40 top-40 h-96 w-96 rounded-full bg-indigo-100/50 blur-[120px]" />
@@ -84,7 +84,7 @@ const Projects = () => {
               <article key={id} className="group">
                 <div
                   className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${
-                    id % 2 !== 0 ? "lg:[&>*:first-child]:order-2" : ""
+                    id % 2 !== 0 ? "[&>*:first-child]:order-2" : ""
                   }`}
                 >
                   {/* Project Image */}
@@ -162,7 +162,7 @@ const Projects = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-24 overflow-hidden bg-gray-950 p-8 text-white sm:p-12">
+        <div className="mt-12 sm:mt-24 overflow-hidden bg-gray-950 p-8 text-white sm:p-12">
           <div className="relative">
             <div className="absolute -right-20 -top-32 h-72 w-72 rounded-full bg-indigo-600/30 blur-[100px]" />
             <div className="absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-purple-600/20 blur-[100px]" />

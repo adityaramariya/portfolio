@@ -9,7 +9,7 @@ const Timeline = ({}: TimelineProps) => {
       {/* Timeline Line */}
       <div className="absolute bottom-0 left-[7px] top-0 hidden w-px bg-gradient-to-b from-indigo-500 via-white/10 to-transparent md:block" />
 
-      <div className="space-y-12">
+      <div className="space-y-4 sm:space-y-12">
         {experiences.map((experience, index) => (
           <article
             key={`${experience.period}-${experience.role}`}
@@ -18,7 +18,7 @@ const Timeline = ({}: TimelineProps) => {
             {/* Timeline Dot */}
             <div className="absolute left-0 top-2 hidden h-[15px] w-[15px] rounded-full border-4 border-gray-950 bg-indigo-500 shadow-[0_0_0_4px_rgba(99,102,241,0.15)] md:block" />
 
-            <div className="bg-white/[0.05] p-7 transition-all duration-500 hover:-translate-y-1 hover:border-indigo-400/30 hover:bg-white/[0.05] sm:p-9">
+            <div className="bg-white/[0.05] p-7 transition-all duration-500 sm:hover:-translate-y-1 hover:border-indigo-400/30 hover:bg-white/[0.05] sm:p-9">
               {/* Top */}
               <div className="flex flex-col justify-between gap-4 md:flex-row md:items-start">
                 <div>

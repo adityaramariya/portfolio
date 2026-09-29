@@ -14,9 +14,12 @@ interface ContributionsProps {
 
 const Contributions = ({ items, title }: ContributionsProps) => {
   return (
-    <Container>
+    // <Container>
+
+    // </Container>
+    <div className="pt-12">
       <Title title={title} />
-      <div className="grid gap-6 md:grid-cols-3 mt-8">
+      <div className="grid gap-6 grid-cols-1 md:grid-cols-3 mt-8">
         {items.map(({ id, title, description }) => (
           <div key={id}>
             <h3 className="font-semibold text-gray-950">{title}</h3>
@@ -26,7 +29,7 @@ const Contributions = ({ items, title }: ContributionsProps) => {
           </div>
         ))}
       </div>
-    </Container>
+    </div>
   );
 };
 

@@ -3,9 +3,15 @@
 import { basePath } from "@/shared/config/app-config";
 // import RecruiterChat from "./RecruiterChat";
 
-const FloatingActions = () => {
+interface FloatingActionsProps {
+  position?: any;
+}
+
+const FloatingActions = ({ position }: FloatingActionsProps) => {
   return (
-    <div className="fixed bottom-2 right-5 z-40 hidden items-center gap-1.5  p-1.5 backdrop-blur-xl sm:flex p-3 bg-transparent">
+    <div
+      className={`${position ? "relative" : "fixed bottom-2"} right-5 z-40 hidden items-center gap-1.5  p-1.5 backdrop-blur-xl sm:flex p-3 bg-transparent`}
+    >
       {/* Resume */}
       <a
         href={`${basePath}/aditya_ramariya_frontend_developer.pdf`}

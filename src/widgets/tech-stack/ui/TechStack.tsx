@@ -154,7 +154,7 @@ const TechStack = () => {
   return (
     <section
       id="stack"
-      className="relative overflow-hidden bg-gray-950 py-24 text-white sm:py-32"
+      className="relative overflow-hidden bg-gray-950 py-12 text-white sm:py-32"
     >
       {/* Background decoration */}
       {/* <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-indigo-100/50 blur-[120px]" />
@@ -195,7 +195,7 @@ const TechStack = () => {
               </div>
 
               {/* Technology Cards */}
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                 {/* overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-100/40 */}
 
                 {technologies.map((technology) => (

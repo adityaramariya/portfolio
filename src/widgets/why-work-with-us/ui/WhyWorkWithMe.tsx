@@ -35,7 +35,7 @@ const WhyWorkWithMe = () => {
   return (
     <section
       id="why-me"
-      className="relative overflow-hidden bg-white py-24 text-gray-950 sm:py-32"
+      className="relative overflow-hidden bg-white py-12 text-gray-950 sm:py-32"
     >
       {/* Background Glow */}
       <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-indigo-100/60 blur-[120px]" />
@@ -60,7 +60,7 @@ const WhyWorkWithMe = () => {
         </p>
 
         {/* Reasons */}
-        <div className="grid gap-5 md:grid-cols-2 mt-16">
+        <div className="grid gap-5 md:grid-cols-2 mt-8 sm:mt-16">
           {reasons.map(({ number, title, description }) => (
             // <article
             //   key={reason.number}
@@ -96,7 +96,7 @@ const WhyWorkWithMe = () => {
         </div>
 
         {/* Bottom Highlight */}
-        <div className="mt-20 overflow-hidden bg-gray-950 p-8 text-white sm:p-12">
+        <div className="mt-8 sm:mt-20 overflow-hidden bg-gray-950 p-8 text-white sm:p-12">
           <div className="relative">
             {/* Glow */}
             <div className="absolute -right-20 -top-32 h-80 w-80 rounded-full bg-indigo-600/20 blur-[100px]" />

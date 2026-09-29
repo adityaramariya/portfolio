@@ -8,7 +8,7 @@ const SectionWrapper = ({ children }: SectionWrapperProps) => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden bg-gray-950 py-24 text-white sm:py-32"
+      className="relative overflow-hidden bg-gray-950 py-12 text-white sm:py-32"
     >
       {/* Background Glows */}
       <div className="absolute left-1/2 top-0 h-[500px] w-[700px] -translate-x-1/2 rounded-full bg-indigo-600/15 blur-[140px]" />

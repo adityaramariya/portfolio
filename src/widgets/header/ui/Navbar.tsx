@@ -1,5 +1,6 @@
 "use client";
 
+import FloatingActions from "@/features/floating-actions/ui/FloatingActions";
 import ThemeButton from "@/features/theme-switch/ui/ThemeButton";
 import { useEffect, useState } from "react";
 
@@ -95,24 +96,21 @@ const Navbar = () => {
             <div className="hidden sm:block">
               <p className="text-sm font-bold text-white">Aditya Ramariya</p>
 
-              <p className="text-[11px] text-gray-500">
-                Senior Frontend Developer
-              </p>
+              <p className="text-[11px] text-gray-500">Sr Frontend Developer</p>
             </div>
           </a>
 
-          <div className="items-center gap-5 rounded-full border border-white/10 bg-white/[0.03] px-5 py-2.5 xl:flex">
+          <div className="items-center gap-5 rounded-full border border-white/10 bg-white/[0.03] px-5 py-2.5 flex">
             {/* Experience */}
-            <div className="flex items-center gap-2.5 hidden xl:flex">
+            <div className="flex items-center gap-2.5 hidden lg:flex">
               <span className="h-2 w-2 rounded-full bg-blue-400" />
-
               <span className="whitespace-nowrap text-xs font-semibold text-gray-300">
                 8+ Years Experience
               </span>
             </div>
 
             {/* Divider */}
-            <span className="h-4 w-px bg-white/10" />
+            <span className="h-4 w-px bg-white/10  hidden lg:flex" />
 
             {/* Availability */}
             <div className="flex items-center gap-2.5 ">
@@ -121,11 +119,14 @@ const Navbar = () => {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
               </span>
 
-              <span className="whitespace-nowrap text-xs font-semibold text-gray-300">
+              <span className="whitespace-nowrap text-xs font-semibold text-gray-300 ">
                 Open to new opportunities
               </span>
             </div>
           </div>
+          {/* <div className="flex lg:hidden">
+            <FloatingActions position />
+          </div> */}
         </div>
 
         {/* =========================
@@ -195,16 +196,16 @@ const Navbar = () => {
           isOpen ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <nav className="mx-auto max-w-7xl px-5 py-5 sm:px-6">
+        <nav className="mx-auto max-w-7xl px-6">
           <div className="flex flex-col">
             {/* Experience */}
-            <div className="mb-2 flex items-center gap-2 border-b border-white/5 py-3">
+            {/* <div className="mb-2 flex items-center gap-2 border-b border-white/5 py-3">
               <span className="h-2 w-2 rounded-full bg-emerald-400" />
 
               <span className="text-sm font-medium text-gray-400">
                 8+ Years Experience
               </span>
-            </div>
+            </div> */}
 
             {/* Navigation */}
             {navItems.map((item) => {

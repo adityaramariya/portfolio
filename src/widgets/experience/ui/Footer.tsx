@@ -2,7 +2,7 @@ interface FooterProps {}
 
 const Footer = ({}: FooterProps) => {
   return (
-    <div className="mt-16 border-t border-white/10 pt-10">
+    <div className="mt-8 sm:mt-16 border-t border-white/10 pt-10">
       <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
         <div>
           <p className="text-sm uppercase tracking-[0.2em] text-gray-500">

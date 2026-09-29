@@ -8,14 +8,14 @@ const AboutMe = ({}: AboutMeProps) => {
         modern, responsive and production-ready web applications.
       </p>
 
-      <p className="mt-6 text-base leading-8 text-gray-500">
+      <p className="mt-4 text-base leading-8 text-gray-500 sm:mt-6">
         I specialize in React, Next.js and TypeScript, with a strong focus on
         creating reusable components, scalable frontend architecture and
         seamless user experiences. I enjoy turning complex requirements and
         designs into clean, maintainable and high-performing interfaces.
       </p>
 
-      <p className="mt-6 text-base leading-8 text-gray-500">
+      <p className="mt-4 text-base leading-8 text-gray-500 sm:mt-6">
         Over the years, I've worked across different products and environments,
         collaborating with designers, backend developers and product teams to
         turn ideas into reliable digital experiences.

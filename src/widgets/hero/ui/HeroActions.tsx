@@ -3,7 +3,7 @@ import Button from "@/shared/ui/button/button";
 
 const Actions = () => {
   return (
-    <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+    <div className="mt-9 flex flex-row items-center justify-center gap-3">
       <Button
         label="View my work"
         isIcon
