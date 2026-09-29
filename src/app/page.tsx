@@ -14,12 +14,12 @@ export default async function Home() {
       <main className="">
         <HeroSection />
         <AboutSection />
-        <ExpertiseSection />
-        <ProjectsSection />
         <ExperienceSection />
+        {/* <ExpertiseSection /> */}
+        <ProjectsSection />
         <TechStackSection />
-        <ContactSection />
         <WhyWorkWithMeSection />
+        <ContactSection />
       </main>
     </>
   );

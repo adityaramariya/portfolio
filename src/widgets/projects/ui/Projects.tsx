@@ -162,7 +162,7 @@ const Projects = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-24 overflow-hidden rounded-3xl bg-gray-950 p-8 text-white sm:p-12">
+        <div className="mt-24 overflow-hidden bg-gray-950 p-8 text-white sm:p-12">
           <div className="relative">
             <div className="absolute -right-20 -top-32 h-72 w-72 rounded-full bg-indigo-600/30 blur-[100px]" />
             <div className="absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-purple-600/20 blur-[100px]" />

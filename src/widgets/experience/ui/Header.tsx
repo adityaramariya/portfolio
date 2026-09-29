@@ -9,8 +9,9 @@ const Header = () => {
         title="Experience"
         description={
           <>
-            8+ years of{" "}
-            <Highlight variant="dark">building for the web.</Highlight>
+            Designed{" "}
+            <Highlight variant="dark">reusable component patterns</Highlight>{" "}
+            that improved consistency across multiple products.
           </>
         }
       />

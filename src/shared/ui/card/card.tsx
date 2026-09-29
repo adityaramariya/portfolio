@@ -12,7 +12,7 @@ const variants = {
 const Card = ({ variant = "light", children, className }: CardProps) => {
   return (
     <div
-      className={`group relative overflow-hidden rounded-3xl border p-7 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl  sm:p-9 ${variants[variant]} ${className}`}
+      className={`group relative overflow-hidden  p-7 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl  sm:p-9 ${variants[variant]} ${className}`}
     >
       {children}
     </div>

@@ -36,6 +36,20 @@ const techStack = {
   ],
   "UI & Styling": [
     {
+      name: "HTML5",
+      description: "Semantic web structure",
+      color: "from-orange-400 to-red-500",
+      rating: 4,
+      level: "Advance",
+    },
+    {
+      name: "CSS3",
+      description: "Modern layouts and animations",
+      color: "from-blue-400 to-indigo-600",
+      rating: 4,
+      level: "Advance",
+    },
+    {
       name: "Tailwind CSS",
       description: "Utility-first responsive UI",
       color: "from-cyan-400 to-cyan-600",
@@ -50,16 +64,9 @@ const techStack = {
       level: "Advance",
     },
     {
-      name: "HTML5",
-      description: "Semantic web structure",
-      color: "from-orange-400 to-red-500",
-      rating: 4,
-      level: "Advance",
-    },
-    {
-      name: "CSS3",
-      description: "Modern layouts and animations",
-      color: "from-blue-400 to-indigo-600",
+      name: "Material UI",
+      description: "Responsive component systems",
+      color: "from-purple-400 to-purple-700",
       rating: 4,
       level: "Advance",
     },
@@ -110,17 +117,51 @@ const techStack = {
       level: "Advance",
     },
   ],
+
+  Tooling: [
+    {
+      name: "Git",
+      // description: "Desktop, tablet & mobile",
+      color: "from-emerald-400 to-green-600",
+      // rating: 4,
+      // level: "Advance",
+    },
+    {
+      name: "Webpack",
+      // description: "Scalable component architecture",
+      color: "from-indigo-400 to-purple-600",
+      // rating: 4,
+      // level: "Advance",
+    },
+    {
+      name: "npm",
+      // description: "Connecting frontend to services",
+      color: "from-pink-400 to-rose-600",
+      // rating: 4,
+      // level: "Advance",
+    },
+    {
+      name: "CI/CD",
+      // description: "Fast and optimized experiences",
+      color: "from-amber-400 to-orange-600",
+      // rating: 4,
+      // level: "Advance",
+    },
+  ],
 };
 
 const TechStack = () => {
   return (
     <section
       id="stack"
-      className="relative overflow-hidden bg-white py-24 text-gray-950 sm:py-32"
+      className="relative overflow-hidden bg-gray-950 py-24 text-white sm:py-32"
     >
       {/* Background decoration */}
-      <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-indigo-100/50 blur-[120px]" />
-      <div className="absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-purple-100/50 blur-[120px]" />
+      {/* <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-indigo-100/50 blur-[120px]" />
+      <div className="absolute -right-40 bottom-20 h-96 w-96 rounded-full bg-purple-100/50 blur-[120px]" /> */}
+
+      <div className="absolute -left-40 top-40 h-96 w-96 rounded-full bg-indigo-600/10 blur-[120px]" />
+      <div className="absolute -right-40 bottom-40 h-96 w-96 rounded-full bg-purple-600/10 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Header */}
@@ -129,11 +170,12 @@ const TechStack = () => {
             title="Tech Stack"
             description={
               <>
-                Tools I use to <Highlight>bring ideas to life.</Highlight>
+                Tools I use to{" "}
+                <Highlight variant="dark">bring ideas to life.</Highlight>
               </>
             }
           />
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-500">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-400">
             A modern frontend toolkit focused on building scalable, maintainable
             and high-performing digital experiences.
           </p>
@@ -145,19 +187,21 @@ const TechStack = () => {
             <div key={category}>
               {/* Category Header */}
               <div className="mb-6 flex items-center gap-4">
-                <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-gray-900">
+                <h3 className="text-sm font-bold uppercase tracking-[0.15em] text-gray-300">
                   {category}
                 </h3>
 
-                <div className="h-px flex-1 bg-gray-200" />
+                <div className="h-px flex-1 bg-white/10" />
               </div>
 
               {/* Technology Cards */}
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {/* overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-100/40 */}
+
                 {technologies.map((technology) => (
                   <div
                     key={technology.name}
-                    className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-gradient-to-br from-gray-50 to-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl hover:shadow-indigo-100/40"
+                    className="group relative bg-white/[0.05] transition-all duration-500 hover:-translate-y-1 hover:border-indigo-400/30 hover:bg-white/[0.05] sm:p-4"
                   >
                     <div className="relative">
                       {/* Top */}
@@ -170,24 +214,24 @@ const TechStack = () => {
                           </div>
 
                           <div className="min-w-0">
-                            <h4 className="truncate font-semibold text-gray-950">
+                            <h4 className="truncate font-semibold text-gray-300">
                               {technology.name}
                             </h4>
 
-                            <span className="text-xs font-bold text-indigo-600">
+                            {/* <span className="text-xs font-bold text-indigo-600">
                               {technology.level}
-                            </span>
+                            </span> */}
                           </div>
                         </div>
 
                         {/* Score */}
-                        <span className="shrink-0 text-sm font-bold text-gray-600">
+                        {/* <span className="shrink-0 text-sm font-bold text-gray-600">
                           {technology.rating}/5
-                        </span>
+                        </span> */}
                       </div>
 
                       {/* Proficiency bar */}
-                      <div className="mt-5 flex gap-1">
+                      {/* <div className="mt-5 flex gap-1">
                         {[1, 2, 3, 4, 5].map((level) => (
                           <span
                             key={level}
@@ -198,7 +242,7 @@ const TechStack = () => {
                             }`}
                           />
                         ))}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 ))}
@@ -208,9 +252,9 @@ const TechStack = () => {
         </div>
 
         {/* Bottom Highlight */}
-        <div className="mt-20 overflow-hidden rounded-3xl bg-gray-950 p-8 text-white sm:p-10">
+        <div className="mt-16 overflow-hidden bg-white/[0.05] p-8 text-white sm:p-10">
           <div className="relative">
-            <div className="absolute -right-20 -top-32 h-72 w-72 rounded-full bg-indigo-600/20 blur-[100px]" />
+            <div className="absolute -right-20 -top-32 h-72 w-72 rounded-full bg-indigo-900/20 blur-[100px]" />
 
             <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="max-w-2xl">

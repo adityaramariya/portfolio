@@ -17,13 +17,13 @@ export const contributions = {
       id: 3,
       title: "API & application integration",
       description:
-        "Worked with API-driven interfaces for authentication, registration, filtering, serarch, mapping, device compatibility and data driven workflows",
+        "Worked with API-driven interfaces for authentication, registration, filtering, search, mapping, device compatibility and data driven workflows",
     },
     {
       id: 4,
       title: "State & access management",
       description:
-        "worked with react-redux, redux, context API, reducers and RBAC to support application state and user permission.",
+        "worked with React-Redux, redux, context API, reducers and RBAC to support application state and user permission.",
     },
     {
       id: 5,
@@ -51,8 +51,8 @@ export const achievements = [
   },
   {
     id: 2,
-    count: "20+",
-    description: "projects delivered",
+    count: "5+",
+    description: "Years React.js",
   },
   {
     id: 3,

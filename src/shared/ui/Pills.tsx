@@ -7,7 +7,7 @@ type PillsProps = {
 const variants: any = {
   light:
     "border-gray-200 bg-gray-50 text-gray-700 backdrop-blur-sm   hover:border-indigo-200 hover:bg-indigo-50 hover:text-indigo-600",
-  dark: "border-white/15 bg-white/5 text-gray-300 backdrop-blur-sm   hover:border-indigo-200 hover:bg-white/[0.03] hover:text-indigo-600",
+  dark: "border-white/15 bg-white/[0.05] text-gray-400 backdrop-blur-sm   hover:border-white/20 hover:bg-white/[0.03] hover:text-gray-300",
 };
 
 const Pills = ({ data, variant = "light", className, ...rest }: PillsProps) => {

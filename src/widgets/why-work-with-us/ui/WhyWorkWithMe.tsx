@@ -96,7 +96,7 @@ const WhyWorkWithMe = () => {
         </div>
 
         {/* Bottom Highlight */}
-        <div className="mt-20 overflow-hidden rounded-3xl bg-gray-950 p-8 text-white sm:p-12">
+        <div className="mt-20 overflow-hidden bg-gray-950 p-8 text-white sm:p-12">
           <div className="relative">
             {/* Glow */}
             <div className="absolute -right-20 -top-32 h-80 w-80 rounded-full bg-indigo-600/20 blur-[100px]" />

@@ -6,7 +6,7 @@ const Achievement = () => {
       {achievements.map((achievement: any) => (
         <div
           key={achievement.id}
-          className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+          className="bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
         >
           <div className="text-4xl font-bold tracking-tight text-gray-950">
             {achievement.count}
