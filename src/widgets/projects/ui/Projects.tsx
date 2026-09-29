@@ -13,6 +13,7 @@ type ProjectsProps = {
   category: string;
   description: string;
   technologies: [];
+  responsibilities: [];
   image: string;
   href?: string;
 };
@@ -50,9 +51,9 @@ const Projects = () => {
           title="Selected Work"
           description={
             <>
-              Projects I'm{" "}
+              Projects I've{" "}
               <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
-                Proud of.
+                Built & Contributed
               </span>
             </>
           }
@@ -60,8 +61,9 @@ const Projects = () => {
 
         <div className="mb-16 mt-5 flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
           <p className="max-w-2xl text-lg leading-8 text-gray-500">
-            A selection of projects where I turned ideas, designs and complex
-            requirements into scalable frontend experiences.
+            A selection of frontend projects where I’ve built responsive
+            interfaces, solved complex technical challenges, and delivered
+            scalable user experiences.
           </p>
         </div>
 
@@ -76,6 +78,7 @@ const Projects = () => {
               technologies,
               image,
               href,
+              responsibilities,
             }: ProjectsProps) => (
               <article key={id} className="group">
                 <div
@@ -94,9 +97,13 @@ const Projects = () => {
 
                     <div className="relative aspect-[16/11] overflow-hidden">
                       <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                        <span className="text-sm font-medium text-gray-400">
-                          Image coming soon
-                        </span>
+                        {image !== "" ? (
+                          <img src={image} alt={image} />
+                        ) : (
+                          <span className="text-sm font-medium text-gray-400">
+                            Image coming soon
+                          </span>
+                        )}
                       </div>
 
                       {/* Image Overlay */}
@@ -108,7 +115,7 @@ const Projects = () => {
                   <div className="max-w-xl">
                     <div className="flex items-center gap-4">
                       <span className="text-sm font-semibold text-indigo-600">
-                        {id}
+                        {String(id).padStart(2, "0")}
                       </span>
 
                       <span className="h-px w-8 bg-gray-300" />
@@ -125,6 +132,17 @@ const Projects = () => {
                     <p className="mt-5 text-base leading-8 text-gray-500">
                       {description}
                     </p>
+                    <h4 className="text-sm font-bold uppercase tracking-[0.15em] text-gray-900 pb-3 border-b border-gray-200 mt-3 mb-3">
+                      <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
+                        Responsibilities
+                      </span>
+                    </h4>
+
+                    <ul className="list-disc pl-6 space-y-1.5">
+                      {responsibilities?.map((responsibility: any) => (
+                        <li key={responsibility}>{responsibility}</li>
+                      ))}
+                    </ul>
 
                     <Pills
                       data={technologies}

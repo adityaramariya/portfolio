@@ -1,5 +1,6 @@
 "use client";
 
+import ThemeButton from "@/features/theme-switch/ui/ThemeButton";
 import { useEffect, useState } from "react";
 
 const navItems = [
