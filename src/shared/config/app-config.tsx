@@ -1,5 +1,7 @@
 export const basePath =
   process.env.NODE_ENV === "production" ? "/portfolio" : "";
+
+console.log("basepath", basePath);
 // export const BaseURL = "https://localhost:7104";
 export const BaseURL =
   process.env.NODE_ENV === "development"
