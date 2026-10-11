@@ -1,5 +1,6 @@
 "use client";
 
+import RecruitChatWidget from "@/features/recruiter-chat/ui/RecruiterChat";
 import { basePath } from "@/shared/config/app-config";
 // import RecruiterChat from "./RecruiterChat";
 
@@ -10,7 +11,8 @@ interface FloatingActionsProps {
 const FloatingActions = ({ position }: FloatingActionsProps) => {
   return (
     <div
-      className={`${position ? "relative" : "fixed bottom-2"} right-5 z-40 hidden items-center gap-1.5  p-1.5 backdrop-blur-xl sm:flex p-3 bg-transparent`}
+      className={`${position ? "relative" : "fixed bottom-2"} right-5 z-40 hidden items-center gap-1.5  p-1.5 backdrop-blur-xl sm:flex p-3`}
+      style={{ backgroundColor: "#0f172b" }}
     >
       {/* Resume */}
       <a
@@ -30,6 +32,7 @@ const FloatingActions = ({ position }: FloatingActionsProps) => {
         Contact
       </a>
       {/* <RecruiterChat /> */}
+      <RecruitChatWidget />
     </div>
   );
 };

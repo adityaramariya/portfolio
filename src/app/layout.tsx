@@ -8,6 +8,8 @@ import Navbar from "../widgets/header/ui/Navbar";
 import { Footer } from "../widgets/footer";
 import { ThemeProvider } from "../features/theme-switch/model/themeContext";
 
+import RecruitChatWidget from "@/features/recruiter-chat/ui/RecruiterChat";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -42,6 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <FloatingActions />
           <Navbar />
           {children}
+          {/* <RecruitChatWidget /> */}
           <Footer />
         </ThemeProvider>
       </body>
