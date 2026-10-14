@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /app/interview
+
+*storybook.log
+storybook-static
